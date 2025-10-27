@@ -20,27 +20,27 @@ To run this project, you must have the following tools installed on your system:
 
 Follow these steps in your terminal (preferably the VS Code integrated terminal) to recreate the environment and deploy the NGINX application.
 
-### 1. Start the Minikube Cluster
+## 1. Start the Minikube Cluster
 
 This command boots up the local Kubernetes environment inside a Docker container:
 minikube start --driver=docker
 
-### 2. Verify the Cluster
+## 2. Verify the Cluster
 Check that the Kubernetes node is running and ready:
 kubectl get nodes
 
-### 3. Deploy the Application
+## 3. Deploy the Application
 This deployment specifies that we want 2 replicas of the standard nginx:latest image.
-# Apply the deployment defined in deployment.yaml
-kubectl apply -f deployment.yaml
+### Apply the deployment defined in deployment.yml
+kubectl apply -f deployment.yml
 
 ### Verify the two pods are running
 kubectl get pods
 
-### 4. Expose the Application
+## 4. Expose the Application
 The service.yaml file creates a NodePort Service to expose the application outside the cluster.
 ### Apply the service definition
-kubectl apply -f service.yaml
+kubectl apply -f service.yml
 
 ### Check the service status
 kubectl get services
@@ -48,17 +48,14 @@ kubectl get services
 ### To access the app in your browser, run:
 minikube service nginx-service --url
 
-### 5. Scale the Application
+## 5. Scale the Application
 We practiced manual scaling by increasing the number of running NGINX pods from 2 to 5.
-
-Bash
-
 ### Scale the deployment to 5 replicas
 kubectl scale deployment nginx-deployment --replicas=5
 
 ### Verify all five pods are running
 kubectl get pods
 
-### 6. Cleanup
+## 6. Cleanup
 Once you are done experimenting, delete the Minikube cluster to free up system resources:
 minikube delete

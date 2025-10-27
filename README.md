@@ -25,7 +25,6 @@ Follow the steps below to create the Minikube cluster and deploy the NGINX appli
 1️⃣ Start the Minikube Cluster
 
 Start the local Kubernetes environment using Docker as the driver:
-```bash
 minikube start --driver=docker
 
 2️⃣ Verify the Cluster

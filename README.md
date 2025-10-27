@@ -71,6 +71,7 @@ minikube delete
 ├── service.yml # Kubernetes service configuration
 ├── Images/ # Folder containing project screenshots and visuals
 └── README.md # Project documentation
+```
 
 ## 🏁 Outcome
 

@@ -20,21 +20,21 @@ Before running this project, ensure you have the following tools installed:
 
 ## ⚙️ Setup & Deployment Guide
 
-Follow the steps below to create the Minikube cluster and deploy the NGINX application.
+Follow the steps below to create the Minikube cluster and deploy the NGINX application. 
 
-### **1️⃣ Start the Minikube Cluster**
+1️⃣ Start the Minikube Cluster
 
 Start the local Kubernetes environment using Docker as the driver:
 ```bash
 minikube start --driver=docker
 
-### **2️⃣ Verify the Cluster**
+2️⃣ Verify the Cluster
 
 Check that the Kubernetes node is running and ready:
 ```bash
 kubectl get nodes
 
-### **3️⃣ Deploy the NGINX Application**
+3️⃣ Deploy the NGINX Application
 
 This step deploys 2 replicas of the standard nginx:latest image.
 Apply the deployment manifest:
@@ -45,7 +45,7 @@ Verify that the pods are running:
 ```bash
 kubectl get pods
 
-### **4️⃣ Expose the Application**
+4️⃣ Expose the Application
 
 The service.yml file defines a NodePort Service to expose NGINX outside the cluster.
 Apply the service configuration:
@@ -60,7 +60,7 @@ To access the app in your browser:
 ```bash
 minikube service nginx-service --url
 
-### **5️⃣ Scale the Deployment**
+5️⃣ Scale the Deployment
 
 Increase the number of running NGINX pods from 2 to 5:
 ```bash
@@ -70,7 +70,7 @@ Verify that all five pods are up and running:
 ```bash
 kubectl get pods
 
-### **6️⃣ Cleanup**
+6️⃣ Cleanup
 
 Once done experimenting, delete the Minikube cluster to free up resources:
 ```bash

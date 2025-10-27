@@ -71,3 +71,15 @@ minikube delete
 ├── service.yml # Kubernetes service configuration
 ├── Images/ # Folder containing project screenshots and visuals
 └── README.md # Project documentation
+
+## 🏁 Outcome
+
+✅ Successfully completed **Task 5: Build a Kubernetes Cluster Locally with Minikube**
+
+By completing this task, the following objectives were achieved:
+
+- 🧱 Set up a **single-node Kubernetes cluster** locally using **Minikube (Docker driver)**  
+- 🚀 Deployed and managed an **NGINX application** within the cluster  
+- 🌐 Exposed the deployment using a **NodePort Service**  
+- 📈 Scaled the deployment replicas using **kubectl**  
+- 🧹 Cleaned up resources by deleting the Minikube cluster  

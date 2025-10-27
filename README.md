@@ -34,18 +34,18 @@ This deployment specifies that we want 2 replicas of the standard nginx:latest i
 # Apply the deployment defined in deployment.yaml
 kubectl apply -f deployment.yaml
 
-# Verify the two pods are running
+### Verify the two pods are running
 kubectl get pods
 
 ### 4. Expose the Application
 The service.yaml file creates a NodePort Service to expose the application outside the cluster.
-# Apply the service definition
+### Apply the service definition
 kubectl apply -f service.yaml
 
-# Check the service status
+### Check the service status
 kubectl get services
 
-# To access the app in your browser, run:
+### To access the app in your browser, run:
 minikube service nginx-service --url
 
 ### 5. Scale the Application
@@ -53,10 +53,10 @@ We practiced manual scaling by increasing the number of running NGINX pods from 
 
 Bash
 
-# Scale the deployment to 5 replicas
+### Scale the deployment to 5 replicas
 kubectl scale deployment nginx-deployment --replicas=5
 
-# Verify all five pods are running
+### Verify all five pods are running
 kubectl get pods
 
 ### 6. Cleanup
